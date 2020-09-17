@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <meta name="robots" content="follow"/>
+  
+  <link rel=icon sizes=192x192 href="assets/images/logo png.png" />
+  <meta name="theme-color" content="#011f41" />
+  <link rel="manifest" href="manifest.json">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sahith manchi" />
+  <meta property="og:url" content="index.html" />
+  
+  <meta name="twitter:card" content="summary_large_image"></meta>
+  <meta name="twitter:creator" content="@saurabhcodes"></meta>
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:width" content="700" />
+  <meta property="og:image:height" content="700" />
+  <meta property="og:image:alt" content="OG image of portfolio" />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+  <!-- PRELOADS -->
+  <link rel="preload" href="js/starfield.worker.js" as="worker" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap" />
+  <link rel="preload" href="js/main.mjs" as="script" crossorigin />
+  <link rel="preload" href="css/index.css" as="style" media="all" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="css/mobile.css" as="style" media="screen and (max-width:768px)" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/icons/fontello/css/in.css" as="style" media="all" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap" as="style" media="all" onload="this.onload=null;this.rel='stylesheet'" />
+  
+  <title>sahith manchi | Java Developer</title>
+  <style>
+  :root{
+  --primary-background:#121212;
+  --secondary-background:#ffffff11;
+  --primary-accent:#011f41;
+  --primary-font:#ccc;
+  --secondary-font:#999;
+}
+.lazyload {
+  opacity:0;
+  transition:opacity .5s ease;
+}
+html,body {
+  margin:0px;
+  background-color:var(--primary-background);
+  font-family: 'Roboto Condensed', 'Lucida Sans Typewriter';
+  height:100%;
+}
+body {
+  background-color: var(--primary-accent);
+  color:transparent;
+}
+a {
+  text-decoration:none;
+  color:#fff;
+  opacity:0;
+}
+.city-image {display: none;}
+.nav {display: none;}
+@media (max-width: 768px) {
+  .hello-text{
+    top:160px;
+    padding:20px;
+    width:260px;
+  }
+  .areyoukiddingme{
+    font-size:24pt;
+  }
+  .toobig{
+    font-size:13pt;
+  }
+  .social-ico-header .icon{
+    font-size:18pt;
+    padding-left:2px;
+    padding-right:7px;
+  }
+}
+  </style>
+  <!-- Abell prefetch -->
+
+
+</head>
+<body>
+  <header id="top">
+  <canvas height="300" width="600" id="starfield"></canvas>
+  <canvas height="300" width="600" id="shooting-star"></canvas>
+  <div class="overlay">
+    <div class="hello-text">
+    <div class="areyoukiddingme float seven-float">Hi,<br>I'm<b style="margin-left:5px;">Sahith Manchi</b></div>
+    <div class="toobig subhead float five-float">&nbsp;I make random things, mostly using Java.</div>
+    <div class="social-ico-header lazyload float eight-float">
+      <a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/sahisahith" class="icon icon-twitter"></a>
+      <a title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/sahith-m-a1ab18165/" class="icon icon-linkedin-squared"></a>
+      <a title="GitHub" target="_blank" rel="noopener" href="https://github.com/sahith1408" class="icon icon-github-circled"></a>
+      <a title="Hackerrank" target="_blank" rel="noopener" href="https://www.hackerrank.com/sahithmanchi1?hr_r=1" class="image  src=" https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/hackerrank.svg""></a>
+</div>
+    </div>
+  </div>
+  <a class="scroll-down-indicator float" href="#projects">Scroll Down</a>
+  <img alt="A canvas of Mumbai City" loading="eager" class="city-image" style="position:absolute;bottom:0px;left:0px;width:100%;" src="assets/images/city2.svg">
+
+  
+  
+  </header>
+  <button aria-label="navbar button" class="nav shadow" onclick="this.classList.toggle('open')">
+  <span class="bars">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+  </button>
+  <nav class="nav-content">
+  <a class="nav-item about" href="#aboutme">
+    <span class="icon icon-info-circled"></span>
+    <span class="name">About</span>
+  </a>
+  <a class="nav-item home" href="#top">
+    <span class="icon icon-home"></span>
+    <span class="name">Home</span>
+  </a>
+  <a class="nav-item projects" href="#projects">
+    <span class="icon icon-gamepad"></span>
+    <span class="name">My Work</span>
+  </a>
+  <a class="nav-item resume" href="resume.html">
+    <span class="icon icon-doc-text-inv"></span>
+    <span class="name">Resume</span>
+  </a>
+  </nav>
+  <div class="nav-overlay"></div>
+  <main class="god-container lazyload">
+    <section id="aboutme" class="aboutme section">
+      <h1>This is me <small style="font-size:20pt;"></small></h1>
+      <b class="huge">About</b>
+      <div class="row">
+      <div class="about-info">
+        <p>
+          Hi, I'm Sahith Manchi, an open-source developer, speaker, tech blogger, and an author of 
+          I make WebApps, Games, VSCode extensions, NPM packages and random things. 
+          My skills majorly include JavaScript along with some knowledge of Python.
+          I love open source, tech community, and building cool & fun things.
+          <br><br>Oh and, I'm an Engineering Student and will be graduating from the college in the year 2020 and I am looking for full-time job opportunities.
+          <br><br><br>
+          <p> Tool i use....... :   <img align="center" alt="Visual Studio Code" width="36px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
+            <img align="center" alt="Java" width="36px" src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"/>
+            <img align="center" alt="HTML5" width="36px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+            <img align="center" alt="python" width="36px" src="https://img.icons8.com/color/48/000000/python.png" />
+            <img align="center" alt="Git" width="41px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
+            <img align="center" alt="GitHub" width="36px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+            <img align="center" alt="mysql" width="36px" src="https://img.icons8.com/ios/50/000000/mysql-logo.png" /></p>
+          
+        </p>
+        <p>.</p>
+        <a class="sayhi btn secondary-btn" title="sahith.work@gmail.com" href="mailto:sahith.work@gmail.com?subject=Sahith!!!&body=Hey Sahith, How ya doing?">Say Hi!</a>
+        <a class="btn secondary-btn" href="resume.html" style="margin-left:10px;">View Resume </a>
+        <br><br><br><span style="color:#999">Email :</span> <br><a href="mailto:sahith.work@gmail.com" style="color: #93b6f1dd;">sahith.work.com</a>
+
+    
+</div>
+    
+  </div>
+        <astro-guy class="casual spreader"></astro-guy>
+        <span class="destruction-msg hide-mobile"></span>
+      </div>
+      </div>
+    </section>
+  <div id="projects" class="projects section">
+    <div class="project-search" style="text-align:center">
+    <astro-guy class="casual typer"></astro-guy>
+    <label style="display:inline;position:absolute;top:-30px;font: weight 45;;color:#faf8f8" for="search">Projects i created </label>
+    <input id="search" class="project-search-input" autocomplete="off" type="search" placeholder="Search by project name / type">
+    </div>
+    <h1 class="huge">Projects</h1>
+    <div class="projects-container">
+    
+    <div 
+        class="project-item" 
+        data-link="https://abelljs.org/"
+        data-name="Abell"
+        data-description="Abell is a static-site-generator to build JSON/Markdown/ or Static data based websites using the familiar syntax of HTML and JavaScript."
+        data-tags="Static Site Generator,JS Library,NPM Package"
+        data-image="/v1592331581/saurabh2019/projects/abell-projects.webp"
+        data-index="0"
+      >
+        <a href="https://abelljs.org/">
+          <h2>Abell <small>Static Site Generator</small></h2>
+          <div class="project-image-container">
+            <div class="overlay"></div>
+            <img 
+              loading="lazy" 
+              alt="Cover image of Abell" 
+              id="projectimage-0" 
+              srcset="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_355/v1592331581/saurabh2019/projects/abell-projects.webp 355w,
+                https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_315/v1592331581/saurabh2019/projects/abell-projects.webp 315w"
+              sizes="(max-width: 768px) 315px, 355px"
+              src="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_315/v1592331581/saurabh2019/projects/abell-projects.webp"
+            >
+            <div class="project-link">https://abelljs.org ↗</div>
+            <div class="project-description">Abell is a static-site-generator to build JSON/Markdown/ or Static data based websites using the familiar syntax of HTML and JavaScript.</div>
+          </div>
+        </a>
+      </div>
+      
+      <div 
+        class="project-item" 
+        data-link="https://saurabhdaware.github.io/text-to-handwriting/"
+        data-name="Text-to-Handwriting"
+        data-description="In College I hated writing assignments so I wrote this tool that converts text into an image that looks like the content is handwritten 😂 (1k+ GitHub Stars)"
+        data-tags="WebApp"
+        data-image="/v1585413874/saurabh2019/projects/text-to-handwriting.webp"
+        data-index="1"
+      >
+        <a href="https://saurabhdaware.github.io/text-to-handwriting/">
+          <h2>Text-to-Handwriting <small>WebApp</small></h2>
+          <div class="project-image-container">
+            <div class="overlay"></div>
+            <img 
+              loading="lazy" 
+              alt="Cover image of Text-to-Handwriting" 
+              id="projectimage-1" 
+              srcset="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_355/v1585413874/saurabh2019/projects/text-to-handwriting.webp 355w,
+                https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_315/v1585413874/saurabh2019/projects/text-to-handwriting.webp 315w"
+              sizes="(max-width: 768px) 315px, 355px"
+              src="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_315/v1585413874/saurabh2019/projects/text-to-handwriting.webp"
+            >
+            <div class="project-link">https://saurabhdaware.github.io/text-to-handwriting/ ↗</div>
+            <div class="project-description">In College I hated writing assignments so I wrote this tool that converts text into an image that looks like the content is handwritten 😂 (1k+ GitHub Stars)</div>
+          </div>
+        </a>
+      </div>
+    
+      <div 
+        class="project-item" 
+        data-link="https://github.com/saurabhdaware/projectman"
+        data-name="ProjectMan"
+        data-description="ProjectMan is a CLI tool to add projects to favorites using command `pm add` and open from them using `pm open` from your command line🦸"
+        data-tags="NPM Package,developer tools,cli"
+        data-image="/v1573932840/saurabh2019/projects/projectman.webp"
+        data-index="5"
+      >
+        <a href="https://github.com/saurabhdaware/projectman">
+          <h2>ProjectMan <small>NPM Package</small></h2>
+          <div class="project-image-container">
+            <div class="overlay"></div>
+            <img 
+              loading="lazy" 
+              alt="Cover image of ProjectMan" 
+              id="projectimage-5" 
+              srcset="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_355/v1573932840/saurabh2019/projects/projectman.webp 355w,
+                https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_315/v1573932840/saurabh2019/projects/projectman.webp 315w"
+              sizes="(max-width: 768px) 315px, 355px"
+              src="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,q_100,w_315/v1573932840/saurabh2019/projects/projectman.webp"
+            >
+            <div class="project-link">https://github.com/saurabhdaware/projectman ↗</div>
+            <div class="project-description">ProjectMan is a CLI tool to add projects to favorites using command `pm add` and open from them using `pm open` from your command line🦸</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <br>
+    <div style="text-align: center;"><button id="show-project-button" class="btn primary-btn">More Projects 0n Going &nbsp;<b>></b></button> </div>
+  </div>
+    
+
+  </main>
+  <footer class="lazyload shadow">
+    <div style="display:flex;">
+      <div class="footer-links" style="flex:1;">
+        <a style="color: #999" href="#top">Scroll to Top</a>
+        <a href="#projects">Projects</a>
+        <a href="#aboutme">About me</a>
+      </div>
+      <div class="soc" style="flex:1;text-align:center;">
+        <span id="bmc-container"></span>
+        <br><a href="resume.html" style="margin-top:20px;display:inline-block;text-align:center;width:180px !important;" class="btn secondary-btn">View Resume <span style="font-size:13pt;" class="icon icon-doc-text-inv"></span></a>
+        <div class="social-ico-header lazyload ">
+  <a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/sahisahith" class="icon icon-twitter"></a>
+  <a title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/sahith-m-a1ab18165/" class="icon icon-linkedin-squared"></a>
+  <a title="GitHub" target="_blank" rel="noopener" href="https://github.com/sahith1408" class="icon icon-github-circled"></a>
+  <a title="hackerrank" target="_blank" rel="noopener" href="https://www.hackerrank.com/sahithmanchi1?hr_r=1" class="icon icon-hackerrank"></a>
+</div>
+      </div>
+    </div>
+    <div style="background-color:#393939;font-size: 11pt; padding:20px 20px;text-align:left;">&nbsp;Sahith manchi&nbsp;<a style="color: #93b6f1ff" href="#000"></a> </div>
+  </footer>
+  <!--Relative contents end -->
+  
+  <astro-guy class="float hover-wave"></astro-guy>    
+  <script defer type="module" src="js/main.mjs"></script>
+  <script type="module">
+  // Components
+  customElements.define('astro-guy', AstroGuy);
+  </script>
+  <script>
+    const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+  if(isFirefox){
+    document.head.innerHTML += /* html */`
+      <link rel="stylesheet" href="css/index.css" as="style" media="all">
+      <link rel="stylesheet" href="css/mobile.css" as="style" media="screen and (max-width:768px)">
+      <link rel="stylesheet" href="assets/icons/fontello/css/in.css" as="style" media="all">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" as="style" media="all">
+    `
+  }
+  </script>
+</body>
+</html>

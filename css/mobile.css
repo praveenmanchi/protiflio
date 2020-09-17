@@ -1,0 +1,182 @@
+.terminal{
+  width:300px;
+  height:200px;
+  left:-10px;
+  font-size:9pt;
+}
+.hide-mobile{display:none;}
+.hide-pc{display:inline;}
+nav{
+  font-size:15pt;
+}
+astro-guy{
+  bottom:160px !important;
+  left:30px !important;
+  top:unset !important;
+}
+
+.nav{
+  width:140px;
+  height:120px;
+  padding:5px;
+  right:-50px;
+  bottom:-50px;
+  outline:none;
+}
+.nav > .bars{
+  top:-20px;
+  left:34px;
+}
+.nav > .bars > span{
+  width:30px;
+  height:3px;
+}
+
+.nav-content{
+  right:-220px;
+  bottom:-200px;
+  height:80px;
+  width:100px;
+} 
+
+.nav.open + .nav-content{
+  height:420px;
+  width:470px;
+}
+
+.nav-item{
+  font-size:10pt;
+  left:190px;
+  top:30px;
+  color:#1118
+}
+.nav-item > .icon{
+  font-size:20pt;
+}
+.nav-item > .name{
+  font-size:10pt;
+}
+.nav-item.home{
+  top:46px;
+  left:123px;
+}
+.nav-item.projects{
+  left:65px;
+  top:88px;
+}
+.nav-item.resume{
+  left:33px;
+  top:158px;
+}
+
+.row{
+  display:block;
+}
+
+.hidden-projects{
+  display:none;
+}
+.god-container{
+  padding-right:30px;
+  padding-left:30px;
+}
+
+.project-search{
+  width:100%;
+  left:0;right:unset;
+  margin:unset;
+}
+
+.project-search > input{
+  width:200px;
+}
+
+.project-search > input::placeholder{
+  font-size:11pt;
+}
+
+.project-image-container{
+  min-height:unset;
+  height:unset;
+  padding-bottom:5px;
+}
+
+.project-description{
+  font-size:10.5pt;
+}
+.project-link{
+  font-size:10pt;
+  width:300px;
+}
+.projects-container a.third{
+  margin-bottom:50px;
+  padding:0px;
+  display:block;
+}
+
+#projects .huge{
+  left:20px;
+  top:-300px;
+}
+
+#achivements .huge{
+  left:-360px;
+  top:330px;
+}
+.article{
+  padding:18px 17px;
+}
+.article-title{
+  font-size:14pt;
+}
+.article-tags{
+  font-size:11pt;
+}
+.article-meta{
+  font-size:11pt;
+}
+
+
+.achivement-title{
+  font-size:16pt;
+}
+
+#achivements p{
+  font-size:11pt;
+}
+
+#achivements .achivement > p{
+  padding:0px;
+  padding-top:10px;
+  overflow-x:hidden;
+}
+
+#dp{
+  width:100px;
+}
+#aboutme .row{
+  text-align:center;
+}
+.about-info{
+  padding:20px 0px;
+  font-size:12pt;
+}
+.project-item {
+  width: 100%;
+  padding: 17px 0px;
+}
+.about-info astro-guy{
+  top:unset !important;
+  bottom:160px !important;
+  left:unset !important;
+  right:30px !important;
+}
+
+footer > div:first-child{
+  padding:40px 10px;
+  display:block !important;
+}
+footer div.soc{
+  text-align:left !important;
+  padding:30px 20px;
+}
